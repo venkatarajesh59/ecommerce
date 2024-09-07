@@ -16,10 +16,10 @@ Feature: Accounts Page Feature
   Scenario: Accounts section count
   Given user is on accounts page
   Then user gets accounts section
-  |Add my first address|
-  |Order history and details|
-  |My credit slips|
-  |My addresses|
-  |My personal information|
+  |ADD MY FIRST ADDRESS|
+  |ORDER HISTORY AND DETAILS|
+  |MY CREDIT SLIPS|
+  |MY ADDRESSES|
+  |MY PERSONAL INFORMATION|
   |Home|
-  And account could should be 5
+  And account could should be 6
