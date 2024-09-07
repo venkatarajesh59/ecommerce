@@ -21,6 +21,7 @@
 		<extentreports-cucumber-adapter>1.10.1</extentreports-cucumber-adapter>
 		<webdrivermanager>5.7.0</webdrivermanager>
 		<cucumber-picocontainer>7.15.0</cucumber-picocontainer>
+		<browserproperty>Firefox</browserproperty>
 	</properties>
 
 	<dependencies>
@@ -130,6 +131,10 @@
 								<include>**/MyTestRunner*.java</include>
 
 							</includes>
+							
+							<systemPropertyVariables>
+							<browserproperty>${browserproperty}</browserproperty>
+							</systemPropertyVariables>
 
 							<parallel>methods</parallel>
 							<threadCount>4</threadCount>

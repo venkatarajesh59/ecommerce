@@ -17,10 +17,10 @@ public class DriverManager {
 	public WebDriver initDriver(String browser) {
 		System.out.println("Browser value is--:" + browser);
 
-		if (browser.equals("chrome")) {
+		if (browser.equals("Chrome")) {
 			WebDriverManager.chromedriver().setup();
 			tlDriver.set(new ChromeDriver());
-		} else if (browser.equals("firefox")) {
+		} else if (browser.equals("Firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			tlDriver.set(new FirefoxDriver());
 		} else {

@@ -29,8 +29,9 @@ public class ApplicationHooks {
 
 	@Before(order = 1)
 	public void launchBrowser() {
+		String browserName = System.getProperty("browserproperty");
 
-		String browserName = prop.getProperty("browser");
+		//String browserName = prop.getProperty("browser");
 		driverManager = new DriverManager();
 		driver = driverManager.initDriver(browserName);
 
