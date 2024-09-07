@@ -17,7 +17,7 @@
 		<maven.compiler.version>3.9.8</maven.compiler.version>
 		<maven.compiler.source>3.9.8</maven.compiler.source>
 		<maven.compiler.target>3.9.8</maven.compiler.target>
-		<maven.surefire.version>2.22.2</maven.surefire.version>
+		<maven.surefire.version>3.0.0-M6</maven.surefire.version>
 		<extentreports-cucumber-adapter>1.10.1</extentreports-cucumber-adapter>
 		<webdrivermanager>5.7.0</webdrivermanager>
 		<cucumber-picocontainer>7.15.0</cucumber-picocontainer>
@@ -30,6 +30,13 @@
 			<artifactId>cucumber-java</artifactId>
 			<version>${cucumber.version}</version>
 		</dependency>
+		
+		<dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>1.18.24</version>
+        <scope>provided</scope>
+    </dependency>
 
 
 		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
@@ -45,6 +52,12 @@
 			<artifactId>extentreports-cucumber7-adapter</artifactId>
 			<version>${extentreports-cucumber-adapter}</version>
 		</dependency>
+		
+		<dependency>
+      <groupId>org.testng</groupId>
+      <artifactId>testng</artifactId>
+      <version>7.3.0</version>            
+    </dependency>
 
 		<!--
 		https://mvnrepository.com/artifact/io.cucumber/cucumber-picocontainer -->
@@ -94,14 +107,15 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>${maven.surefire.version}</version>
-
+				
+				
 			</plugin>
 
 			<plugin>
 
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-failsafe-plugin</artifactId>
-				<version>3.3.1</version>
+				<version>3.0.0-M5</version>
 
 				<executions>
 					<execution>
@@ -113,7 +127,7 @@
 						<configuration>
 							<includes>
 
-								<include>**/MyRunner.java</include>
+								<include>**/MyTestRunner*.java</include>
 
 							</includes>
 
